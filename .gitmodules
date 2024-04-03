@@ -1,0 +1,6 @@
+[submodule "amneziawg-go"]
+	path = amneziawg-go
+	url = https://github.com/lost-illusion/amneziawg-go
+[submodule "amneziawg-tools"]
+	path = amneziawg-tools
+	url = https://github.com/lost-illusion/amneziawg-tools
