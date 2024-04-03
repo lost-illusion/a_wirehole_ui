@@ -27,7 +27,7 @@ services:
     container_name: wireguard
     ports:
       - 5000:5000
-      - 51820:51820/udp
+      - ${SERVERPORT}:${SERVERPORT}/udp
     cap_add:
       - NET_ADMIN
       - SYS_MODULE
