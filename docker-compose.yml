@@ -29,8 +29,8 @@ services:
       dockerfile: ./docker-wireguard/Dockerfile
     container_name: wireguard
     ports:
-      - ${WGUI_PORT}:${WGUI_PORT}
-      - ${SERVERPORT}:${SERVERPORT}/udp
+      - ${WGUI_PORT}:5000
+      - ${SERVERPORT}:51820/udp
     cap_add:
       - NET_ADMIN
       - SYS_MODULE
