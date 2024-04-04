@@ -4,3 +4,6 @@
 [submodule "amneziawg-tools"]
 	path = amneziawg-tools
 	url = https://github.com/lost-illusion/amneziawg-tools
+[submodule "docker-wireguard"]
+	path = docker-wireguard
+	url = https://github.com/linuxserver/docker-wireguard
