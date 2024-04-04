@@ -7,7 +7,7 @@ networks:
         - subnet: 10.2.0.0/24
 services:
   unbound:
-    image: mvance/unbound:latest
+    image: mvance/unbound:1.16.3
     container_name: unbound
     restart: unless-stopped
     hostname: unbound
