@@ -1,3 +1,35 @@
+## Updated version by me
+
+### How to install
+1) clone
+```bash
+git clone
+```
+2) init submodules
+```bash
+git submodule init
+```
+3) pull them
+```bash
+git pull --recurse-submodules
+```
+4) copy .env.example and rename to .env, then write you data
+```bash
+cp .env.example .env
+```
+5) Build and run
+```bash
+docker-compose up -d --build
+```
+
+### How to access to pi-hole
+1) connect to vpn
+2) open http://10.2.0.100/admin/
+3) you are the best
+
+### Possible upgrades
+1) current config does not support wireguard-ui, or any other ui (you can enable them in docker-compose.yml, but need reconfigure them to pointing out to same wireguard config)
+2) for working with new amneziawg params you need add them manually to server and every peer `[interface]` block, im talking about [this](https://github.com/amnezia-vpn/amneziawg-linux-kernel-module?tab=readme-ov-file#configuration)
 
 ## What is this?
 
