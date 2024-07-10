@@ -39,25 +39,13 @@ services:
       - net.ipv4.ip_forward=1
     volumes:
       - ./config:/config
+    dns:
+      - 10.2.0.100 # Points to pihole
+      - 10.2.0.200 # Points to unbound
     env_file: .env
-
-  wireguard-ui:
-    image: ngoduykhanh/wireguard-ui:latest
-    container_name: wireguard-ui
-    depends_on:
-      - wireguard
-    cap_add:
-      - NET_ADMIN
-    network_mode: service:wireguard
-    logging:
-      driver: json-file
-      options:
-        max-size: 50m
-    volumes:
-      - ./db:/app/db
-      - ./config:/config
-    env_file: .env
-
+    networks:
+      private_network:
+        ipv4_address: 10.2.0.3
   pihole:
     depends_on:
       - unbound
@@ -76,4 +64,20 @@ services:
     networks:
       private_network:
         ipv4_address: 10.2.0.100
-    env_file: ./.env
+    env_file: .env
+  # wireguard-ui:
+  #   image: ngoduykhanh/wireguard-ui:latest
+  #   container_name: wireguard-ui
+  #   depends_on:
+  #     - wireguard
+  #   cap_add:
+  #     - NET_ADMIN
+  #   network_mode: service:wireguard
+  #   logging:
+  #     driver: json-file
+  #     options:
+  #       max-size: 50m
+  #   volumes:
+  #     - ./db:/app/db
+  #     - ./config:/config
+  #   env_file: .env
