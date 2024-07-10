@@ -31,6 +31,9 @@ docker-compose up -d --build
 1) current config does not support wireguard-ui, or any other ui (you can enable them in docker-compose.yml, but need reconfigure them to pointing out to same wireguard config)
 2) for working with new amneziawg params you need add them manually to server and every peer `[interface]` block, im talking about [this](https://github.com/amnezia-vpn/amneziawg-linux-kernel-module?tab=readme-ov-file#configuration)
 
+# IMPORTANT
+**After setup this, you may use only clients from amneziavpn, or any custom with support this new parameneters**
+
 ## What is this?
 
 WireHole is a docker-compose project that combines WireGuard, PiHole, and Unbound to create a full or split-tunnel VPN that is easy to deploy and manage. This setup allows for a VPN with ad-blocking via PiHole and enhanced DNS privacy and caching through Unbound.
