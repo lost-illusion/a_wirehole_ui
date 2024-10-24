@@ -32,7 +32,7 @@ docker-compose up -d --build
 2) for working with new amneziawg params you need add them manually to server and every peer `[interface]` block, im talking about [this](https://github.com/amnezia-vpn/amneziawg-linux-kernel-module?tab=readme-ov-file#configuration)
 
 # IMPORTANT
-**After setup this, you may use only clients from amneziavpn, or any custom with support this new parameneters**
+**After setup this, you may use only clients from amneziavpn, or any custom with support this new parameters**
 
 ## What is this?
 
